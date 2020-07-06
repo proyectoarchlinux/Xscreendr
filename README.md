@@ -33,3 +33,8 @@ Para aplicar la resolución deberá colocarse:
 ´1920x1080_144.00´
 
 Y procederá el script.
+
+<img src="https://raw.githubusercontent.com/proyectoarchlinux/Xscreendr/master/scrip.png"></img>
+
+
+<img src="https://raw.githubusercontent.com/proyectoarchlinux/Xscreendr/master/script2.png"></img>

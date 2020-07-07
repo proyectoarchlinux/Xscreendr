@@ -7,7 +7,7 @@ clear
 echo -e "Script creado por \e[92mDaniel Nogales\e[0m de \e[96mProyecto Archlinux\e[0m."
 
 echo""
-echo -e "\e[31m                  Estado en BETA v1.0\e[0m"
+echo -e "\e[31m                             Estado en BETA v1.0\e[0m"
 echo""
 
 echo "#########################################################################"
@@ -24,10 +24,9 @@ function DVI {
 function DisplayPort {
   echo "DisplayPort"
 }
-function salir {
-  exit 0
+function exitlet {
   clear
-  sh xscreendr.sh
+  exit 0
 }
 
 
@@ -67,7 +66,8 @@ do
       sleep 2
       sh select.sh
     ;;
-    4)salir
+    4) exitlet
+    sh xscreendr.sh
     ;;
   esac
 done

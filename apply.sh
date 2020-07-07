@@ -7,7 +7,7 @@ clear
 echo -e "Script creado por \e[92mDaniel Nogales\e[0m de \e[96mProyecto Archlinux\e[0m."
 
 echo""
-echo -e "\e[31m                  Estado en BETA v1.0\e[0m"
+echo -e "\e[31m                            Estado en BETA v1.0\e[0m"
 echo""
 
 echo "#########################################################################"
@@ -15,13 +15,12 @@ echo "                               Aplicar resolución                        
 echo "#########################################################################"
 echo ""
 
-function salir {
+function exitlet {
   echo "######################################################################"
   echo "                             Vuelta al Menu                           "
   echo "######################################################################"
-  exit 0
   clear
-  sh xscreendr.sh
+  exit 0
 }
 function HDMI {
   echo "HDMI"
@@ -69,7 +68,8 @@ do
       sleep 2
       sh apply.sh
     ;;
-    4) salir
+    4) exitlet
+    sh xscreendr.sh
     ;;
   esac
 done

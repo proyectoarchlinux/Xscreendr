@@ -17,13 +17,13 @@ echo ""
 echo -e "\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m\e[93m#\e[0m\e[31m#\e[0m"
 echo ""
 
-function resolucion {
+function resolution {
   echo "######################################################################"
   echo "                               Crea la resolución                     "
   echo "######################################################################"
   echo ""
 }
-function aplicar {
+function apply {
   echo "######################################################################"
   echo "                               Aplicar resolución                     "
   echo "######################################################################"
@@ -36,7 +36,7 @@ function look {
   echo ""
 }
 
-function salir {
+function exitlet {
   echo "######################################################################"
   echo "                                  Bye!                               "
   echo "######################################################################"
@@ -54,7 +54,7 @@ function DisplayPort {
 
 #cvt 1920 1080 144.00 | grep  Modeline | sed 's/Modeline //'
 cvt=cvt
-creacion=("")
+creation=("")
 resol=("")
 
 select item in "Crea la resolución " "Aplicar resolución" "Ver resoluciones disponibles" "Salir"
@@ -62,22 +62,22 @@ do
   echo ""
 #  echo "Se ha escogido $REPLY: $item"
   case "$REPLY" in
-    1) resolucion
+    1) resolution
       echo -e "Ejemplo: \e[31m1920 1080 60.00\e[0m"
       echo ""
       read creacion
-      rosa=$($cvt $creacion | grep  Modeline | sed 's/Modeline //')
-      xrandr --newmode $rosa
+      command=$($cvt $creation | grep  Modeline | sed 's/Modeline //')
+      xrandr --newmode $command
       sh select.sh
     ;;
-    2) aplicar
+    2) apply
       sh apply.sh
     ;;
-    3)look
+    3) look
       xrandr
     ;;
-    4) salir
-    exit
+    4) exitlet
+    exit 0
     ;;
   esac
 done

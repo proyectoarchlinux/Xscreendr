@@ -26,8 +26,8 @@ function DisplayPort {
 }
 function salir {
   exit 0
-  # sh xscreendr.sh
 }
+
 
 resol=("")
 

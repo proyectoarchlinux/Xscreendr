@@ -20,7 +20,6 @@ function salir {
   echo "                             Vuelta al Menu                           "
   echo "######################################################################"
   exit 0
-  # sh xscreendr.sh
 }
 function HDMI {
   echo "HDMI"

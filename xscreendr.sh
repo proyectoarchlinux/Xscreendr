@@ -7,7 +7,7 @@ clear
 echo -e "Script creado por \e[92mDaniel Nogales\e[0m de \e[96mProyecto Archlinux\e[0m."
 #echo "Script creado por Daniel Nogales de Proyecto Archlinux."
 echo""
-echo -e "\e[31m                  Estado en BETA\e[0m"
+echo -e "\e[31m                  Estado en BETA v0.1\e[0m"
 echo""
 
 echo "#########################################################################"

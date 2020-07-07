@@ -5,7 +5,7 @@
 #####################################################################
 clear
 echo -e "Script creado por \e[92mDaniel Nogales\e[0m de \e[96mProyecto Archlinux\e[0m."
-#echo "Script creado por Daniel Nogales de Proyecto Archlinux."
+
 echo""
 echo -e "\e[31m                  Estado en BETA v1.0\e[0m"
 echo""
@@ -20,6 +20,8 @@ function salir {
   echo "                             Vuelta al Menu                           "
   echo "######################################################################"
   exit 0
+  clear
+  sh xscreendr.sh
 }
 function HDMI {
   echo "HDMI"

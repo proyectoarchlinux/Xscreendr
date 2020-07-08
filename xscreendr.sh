@@ -65,7 +65,7 @@ do
     1) resolution
       echo -e "Ejemplo: \e[31m1920 1080 60.00\e[0m"
       echo ""
-      read creacion
+      read creation
       command=$($cvt $creation | grep  Modeline | sed 's/Modeline //')
       xrandr --newmode $command
       sh select.sh

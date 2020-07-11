@@ -82,7 +82,7 @@ until [ "$opc" -eq 4 ]
                 resol1=""
                 read resol1
                 xrandr --addmode HDMI-0 $resol1
-                submenu_select
+                menu
               ;;
               2)
                 echo ""
@@ -91,7 +91,7 @@ until [ "$opc" -eq 4 ]
                 resol=""
                 read resol1
                 xrandr --addmode DVI-0 $resol1
-                submenu_select
+                menu
               ;;
               3)
                 echo ""
@@ -100,7 +100,7 @@ until [ "$opc" -eq 4 ]
                 resol=""
                 read resol1
                 xrandr --addmode DisplayPort-0 $resol1
-                submenu_select
+                menu
               ;;
               *)
                 submenu_select
@@ -123,18 +123,18 @@ until [ "$opc" -eq 4 ]
                 1)
                   echo ""
                   xrandr --output HDMI-0 --mode $resol2
-                  submenu_apply
+                  menu
                 ;;
                 2)
                   echo ""
                   xrandr --output DVI-0 --mode $resol2
-                  submenu_apply
+                  menu
                 ;;
                 3)
                   echo ""
                   sleep 4
                   xrandr --output DisplayPort-0 --mode $resol2
-                  submenu_apply
+                  menu
                 ;;
                 *)
                   submenu_apply

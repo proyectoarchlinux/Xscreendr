@@ -111,6 +111,7 @@ until [ "$opc" -eq 4 ]
         menu
       ;;
       2)
+        seleccion
         echo ""
         echo "Escribe la resolución:"
         echo ""
@@ -144,6 +145,7 @@ until [ "$opc" -eq 4 ]
             done
       ;;
       3)
+        seleccion
         echo""
         xrandr
         echo ""

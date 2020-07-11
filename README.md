@@ -1,6 +1,5 @@
 # Xscreendr
 #### Un script basado en la creación de resolución de pantallas.
-## Éste script está en fase BETA y puede dar fallas, no daña al sistema.
 
 Xscreendr te permite añadir nuevas resoluciones a tu monitor con Xrandr y te da la opción de crear un script para tu autostart.
 

@@ -55,13 +55,13 @@ Para crear la resolución le pedirá que la cree:
 
 Ejemplo:
 
-´1920x1080 144Hz se deberá escribir en este apartado --> 1920 1080 144.00´
+`1920x1080 144Hz se deberá escribir en este apartado --> 1920 1080 144.00`
 
 Primero ancho, alto y tasa de refresco (Igual que el comando cvt).
 
 Para aplicar la resolución deberá colocarse:
 
-´1920x1080_144.00´
+`1920x1080_144.00`
 
 Y procederá el script.
 

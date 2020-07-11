@@ -197,13 +197,13 @@ until [ "$opc" -eq 5 ]
         case $opc4 in
           1)
             echo ""
-            echo "xrandr --newmode $command && xrandr --addmode DVI-0 $resol && xrandr --output DVI-0 --mode $resol" > script_pantalla.sh
+            echo "xrandr --newmode $command && xrandr --addmode HDMI-0 $resol && xrandr --output HDMI-0 --mode $resol" > script_pantalla.sh
             chmod +x script_pantalla.sh
             script_screen
           ;;
           2)
             echo ""
-            echo "xrandr --newmode $command && xrandr --addmode HDMI-0 $resol && xrandr --output HDMI-0 --mode $resol" > script_pantalla.sh
+            echo "xrandr --newmode $command && xrandr --addmode DVI-0 $resol && xrandr --output DVI-0 --mode $resol" > script_pantalla.sh
             chmod +x script_pantalla.sh
             script_screen
           ;;

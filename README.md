@@ -38,7 +38,14 @@ Para aplicar la resolución deberá colocarse:
 
 Y procederá el script.
 
-<img src="https://raw.githubusercontent.com/proyectoarchlinux/Xscreendr/master/scrip.png"></img>
+<img src="https://raw.githubusercontent.com/proyectoarchlinux/Xscreendr/master/script.png"></img>
 
 
 <img src="https://raw.githubusercontent.com/proyectoarchlinux/Xscreendr/master/script2.png"></img>
+
+
+<img src="https://raw.githubusercontent.com/proyectoarchlinux/Xscreendr/master/script3.png"></img>
+
+
+<img src="https://raw.githubusercontent.com/proyectoarchlinux/Xscreendr/master/script4.png"></img>
+

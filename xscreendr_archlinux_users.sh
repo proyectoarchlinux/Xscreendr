@@ -94,14 +94,14 @@ until [ "$opc" -eq 5 ]
           do
             case "$opc2" in
               1)
-              echo ""
-              echo -e "Escribe tu resolucion Ejemplo:\e[31m1920x1080_60.00\e[0m:"
-              echo ""
-              read resol
-              xrandr --addmode VGA-0 $resol
-              echo ""
-              echo -e "\e[92m¡Listo!\e[0m"
-              submenu_select
+                echo ""
+                echo -e "Escribe tu resolucion Ejemplo:\e[31m1920x1080_60.00\e[0m:"
+                echo ""
+                read resol
+                xrandr --addmode VGA-0 $resol
+                echo ""
+                echo -e "\e[92m¡Listo!\e[0m"
+                submenu_select
               ;;
               2)
                 echo ""

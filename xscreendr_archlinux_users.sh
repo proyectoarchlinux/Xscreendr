@@ -35,21 +35,23 @@ menu()
   submenu_select()
     {
       echo ""
-      echo "1) HDMI"
-      echo "2) DVI"
-      echo "3) DisplayPort"
-      echo "4) Volver al menú principal"
+      echo "1) VGA"
+      echo "2) HDMI"
+      echo "3) DVI"
+      echo "4) DisplayPort"
+      echo "5) Volver al menú principal"
       echo ""
     }
 
 submenu_apply()
   {
     echo ""
-    echo "1) HDMI"
-    echo "2) DVI"
-    echo "3) DisplayPort"
-    echo "4) Escribir la resolución"
-    echo "5) Volver al menú principal"
+    echo "1) VGA"
+    echo "2) HDMI"
+    echo "3) DVI"
+    echo "4) DisplayPort"
+    echo "5) Escribir la resolución"
+    echo "6) Volver al menú principal"
     echo ""
   }
 
@@ -63,10 +65,11 @@ submenu_apply()
   script_screen()
   {
     echo ""
-    echo "1) Crear para HDMI"
-    echo "2) Crear para DVI"
-    echo "3) Crear para DisplayPort"
-    echo "4) Volver al menú principal"
+    echo "1) Crear para VGA"
+    echo "2) Crear para HDMI"
+    echo "3) Crear para DVI"
+    echo "4) Crear para DisplayPort"
+    echo "5) Volver al menú principal"
     echo ""
   }
 
@@ -87,10 +90,20 @@ until [ "$opc" -eq 5 ]
         echo ""
         echo -e "Elige la interfaz para \e[31m"$creation"\e[0m:"
         echo ""
-        until [ "$opc2" -eq 4 ]
+        until [ "$opc2" -eq 5 ]
           do
             case "$opc2" in
               1)
+              echo ""
+              echo -e "Escribe tu resolucion Ejemplo:\e[31m1920x1080_60.00\e[0m:"
+              echo ""
+              read resol
+              xrandr --addmode VGA-0 $resol
+              echo ""
+              echo -e "\e[92m¡Listo!\e[0m"
+              submenu_select
+              ;;
+              2)
                 echo ""
                 echo -e "Escribe tu resolucion Ejemplo:\e[31m1920x1080_60.00\e[0m:"
                 echo ""
@@ -100,7 +113,7 @@ until [ "$opc" -eq 5 ]
                 echo -e "\e[92m¡Listo!\e[0m"
                 submenu_select
               ;;
-              2)
+              3)
                 echo ""
                 echo -e "Escribe tu resolucion Ejemplo:\e[31m1920x1080_60.00\e[0m:"
                 echo ""
@@ -110,7 +123,7 @@ until [ "$opc" -eq 5 ]
                 echo -e "\e[92m¡Listo!\e[0m"
                submenu_select
              ;;
-              3)
+              4)
                 echo ""
                 echo -e "Escribe tu resolucion Ejemplo: \e[31m1920x1080_60.00\e[0m:"
                 echo ""
@@ -137,24 +150,31 @@ until [ "$opc" -eq 5 ]
         #read resol
         echo ""
         echo -e "Elige la interfaz para aplicar la resolución \e[31m"$resol"\e[0m:"
-          until [ "$opc3" -eq 5 ]
+          until [ "$opc3" -eq 6 ]
             do
               case "$opc3" in
                 1)
                   echo ""
-                  xrandr --output HDMI-0 --mode $resol
+                  xrandr --output VGA-0 --mode $resol
                   echo ""
                   echo -e "\e[92m¡Listo!\e[0m"
                   submenu_apply
                 ;;
                 2)
                   echo ""
-                  xrandr --output DVI-0 --mode $resol
+                  xrandr --output HDMI-0 --mode $resol
                   echo ""
                   echo -e "\e[92m¡Listo!\e[0m"
                   submenu_apply
                 ;;
                 3)
+                  echo ""
+                  xrandr --output DVI-0 --mode $resol
+                  echo ""
+                  echo -e "\e[92m¡Listo!\e[0m"
+                  submenu_apply
+                ;;
+                4)
                   echo ""
                   sleep 4
                   xrandr --output DisplayPort-0 --mode $resol
@@ -162,7 +182,7 @@ until [ "$opc" -eq 5 ]
                   echo -e "\e[92m¡Listo!\e[0m"
 		              submenu_apply
                 ;;
-                4)
+                5)
                   echo ""
                   echo "Escribe tu resolución:"
                   echo ""
@@ -192,22 +212,28 @@ until [ "$opc" -eq 5 ]
       echo ""
       echo -e "Elige la interfaz para el \e[92mscript\e[0m:"
       echo ""
-      until [ "$opc4" -eq 4 ]
+      until [ "$opc4" -eq 5 ]
       do
         case $opc4 in
           1)
             echo ""
-            echo "xrandr --newmode $command && xrandr --addmode HDMI-0 $resol && xrandr --output HDM-0 --mode $resol" > script_pantalla.sh
+            echo "xrandr --newmode $command && xrandr --addmode VGA-0 $resol && xrandr --output VGA-0 --mode $resol" > script_pantalla.sh
             chmod +x script_pantalla.sh
             script_screen
           ;;
           2)
             echo ""
-            echo "xrandr --newmode $command && xrandr --addmode DVI-0 $resol && xrandr --output DVI-0 --mode $resol" > script_pantalla.sh
+            echo "xrandr --newmode $command && xrandr --addmode HDMI-0 $resol && xrandr --output HDM-0 --mode $resol" > script_pantalla.sh
             chmod +x script_pantalla.sh
             script_screen
           ;;
           3)
+            echo ""
+            echo "xrandr --newmode $command && xrandr --addmode DVI-0 $resol && xrandr --output DVI-0 --mode $resol" > script_pantalla.sh
+            chmod +x script_pantalla.sh
+            script_screen
+          ;;
+          4)
             echo ""
             echo "xrandr --newmode $command && xrandr --addmode DisplayPort-0 $resol && xrandr --output DisplayPort-0 --mode $resol" > script_pantalla.sh
             chmod +x script_pantalla.sh

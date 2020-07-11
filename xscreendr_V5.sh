@@ -77,7 +77,7 @@ until [ "$opc" -eq 5 ]
     case "$opc" in
       1)
         seleccion
-        echo "Ejemplo: \e[31m1920 1080 60.00 (Sin espacios de más)\e[0m" #\e[31m   \e[0m
+        echo "Ejemplo: \e[31m1920 1080 60.00 (Sin espacios de más)\e[0m"
         echo ""
         creation=""
         read creation
@@ -131,7 +131,7 @@ until [ "$opc" -eq 5 ]
       2)
         seleccion
         echo ""
-        #echo "Escribe la resolución:" #Descomete en caso de querer escribir la resolución para aplicarla.
+        #echo "Escribe la resolución:"
         #echo ""
         opc3=0
         #read resol

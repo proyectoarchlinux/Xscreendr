@@ -9,11 +9,11 @@ Xscreendr te permite añadir nuevas resoluciones a tu monitor con Xrandr y te da
 
 Dar permisos de ejecución:
 
-`chmod +x xscreendr_V5.sh`
+`chmod +x xscreendr.sh`
 
 Ejecutar y probar:
 
-`sh xscreendr_V5.sh`
+`sh xscreendr.sh`
 
 No usa ni es necesario permisos de ROOT.
 

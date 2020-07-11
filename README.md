@@ -27,7 +27,27 @@ Ejecutar y probar:
 
 `sh xscreendr_archlinux_users.sh`
 
-No usa ni es necesario permisos de ROOT.
+## Éste script cuenta con veriones para VirtualBox
+
+Para configurarlo en virtualbox es idéntico:
+
+> Usuarios de Debian y derivados:
+
+`chmod +x xscreendr_debian_VBoxEdition.sh`
+
+Ejecutar script:
+
+`sh xscreendr_debian_VBoxEdition.sh`
+
+> Usuarios de Archlinux y derivados:
+
+`chmod +x xscreendr_archlinux_VBoxEdition.sh`
+
+Ejecutar script:
+
+`sh xscreendr_archlinux_VBoxEdition.sh`
+
+- No usa ni es necesario permisos de ROOT.
 
 # Configuración:
 

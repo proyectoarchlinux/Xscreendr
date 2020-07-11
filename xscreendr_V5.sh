@@ -85,14 +85,14 @@ until [ "$opc" -eq 5 ]
         xrandr --newmode $command
         opc2=0
         echo ""
-        echo "Elige la interfaz:"
+        echo "Elige la interfaz para \e[31m"$creation"\e[0m:"
         echo ""
         until [ "$opc2" -eq 4 ]
           do
             case "$opc2" in
               1)
                 echo ""
-                echo "Escribe tu resolucion:"
+                echo "Escribe tu resolucion Ejemplo:\e[31m1920x1080_60.00\e[0m:"
                 echo ""
                 read resol
                 xrandr --addmode HDMI-0 $resol
@@ -102,7 +102,7 @@ until [ "$opc" -eq 5 ]
               ;;
               2)
                 echo ""
-                echo "Escribe tu resolucion:"
+                echo "Escribe tu resolucion Ejemplo:\e[31m1920x1080_60.00\e[0m:"
                 echo ""
                 read resol
                 xrandr --addmode DVI-0 $resol
@@ -112,7 +112,7 @@ until [ "$opc" -eq 5 ]
              ;;
               3)
                 echo ""
-                echo "Escribe tu resolucion:"
+                echo "Escribe tu resolucion Ejemplo: \e[31m1920x1080_60.00\e[0m:"
                 echo ""
                 read resol
                 xrandr --addmode DisplayPort-0 $resol
@@ -183,12 +183,14 @@ until [ "$opc" -eq 5 ]
       3)
         clear
         xrandr
+        echo ""
+        echo "\e[92m¡Listo!\e[0m"
         menu
       ;;
       4)
       opc4=0
       echo ""
-      echo "Elige la interfaz para el script:"
+      echo "Elige la interfaz para el \e[92mscript\e[0m:"
       echo ""
       until [ "$opc4" -eq 4 ]
       do

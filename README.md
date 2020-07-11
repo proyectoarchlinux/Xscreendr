@@ -3,6 +3,11 @@
 
 Xscreendr te permite añadir nuevas resoluciones a tu monitor con Xrandr y te da la opción de crear un script para tu autostart.
 
+## Paquetes usados
+
+- xrandr
+- gtf
+
 # Utilización:
 
 `git clone https://github.com/proyectoarchlinux/Xscreendr.git`

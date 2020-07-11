@@ -9,11 +9,23 @@ Xscreendr te permite añadir nuevas resoluciones a tu monitor con Xrandr y te da
 
 Dar permisos de ejecución:
 
-`chmod +x xscreendr.sh`
+> Para usuarios de Debian y derivados:
+
+`chmod +x xscreendr_debian_users.sh`
+
+> Para usuarios de Archlinux y derivados:
+
+`chmod +x xscreendr_archlinux_users.sh`
 
 Ejecutar y probar:
 
-`sh xscreendr.sh`
+> Usuarios de Debian y derivados:
+
+`sh xscreendr_debian_users.sh`
+
+> Usuarios de Archlinux y derivados:
+
+`sh xscreendr_archlinux_users.sh`
 
 No usa ni es necesario permisos de ROOT.
 

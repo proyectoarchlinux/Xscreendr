@@ -10,29 +10,29 @@ Xscreendr te permite añadir nuevas resoluciones a tu monitor con Xrandr y te da
 
 # Utilización:
 
-`git clone https://github.com/proyectoarchlinux/Xscreendr.git`
+`$ git clone https://github.com/proyectoarchlinux/Xscreendr.git`
 
-`cd Xscreendr`
+`$ cd Xscreendr`
 
 Dar permisos de ejecución:
 
 > Para usuarios de Debian y derivados:
 
-`chmod +x xscreendr_debian_users.sh`
+`$ chmod +x xscreendr_debian_users.sh`
 
 > Para usuarios de Archlinux y derivados:
 
-`chmod +x xscreendr_archlinux_users.sh`
+`$ chmod +x xscreendr_archlinux_users.sh`
 
 Ejecutar y probar:
 
 > Usuarios de Debian y derivados:
 
-`sh xscreendr_debian_users.sh`
+`$ sh xscreendr_debian_users.sh`
 
 > Usuarios de Archlinux y derivados:
 
-`sh xscreendr_archlinux_users.sh`
+`$ sh xscreendr_archlinux_users.sh`
 
 ## Éste script cuenta con veriones para VirtualBox
 
@@ -40,19 +40,19 @@ Para configurarlo en virtualbox es idéntico:
 
 > Usuarios de Debian y derivados:
 
-`chmod +x xscreendr_debian_VBoxEdition.sh`
+`$ chmod +x xscreendr_debian_VBoxEdition.sh`
 
 Ejecutar script:
 
-`sh xscreendr_debian_VBoxEdition.sh`
+`$ sh xscreendr_debian_VBoxEdition.sh`
 
 > Usuarios de Archlinux y derivados:
 
-`chmod +x xscreendr_archlinux_VBoxEdition.sh`
+`$ chmod +x xscreendr_archlinux_VBoxEdition.sh`
 
 Ejecutar script:
 
-`sh xscreendr_archlinux_VBoxEdition.sh`
+`$ sh xscreendr_archlinux_VBoxEdition.sh`
 
 - No usa ni es necesario permisos de ROOT.
 

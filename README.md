@@ -3,6 +3,10 @@
 
 Xscreendr te permite añadir nuevas resoluciones a tu monitor con Xrandr y te da la opción de crear un script para tu autostart.
 
+### ¡Una donación es más que vienbenida!
+
+A través de paypal: https://paypal.me/proyectoarchlinux?locale.x=es_ES
+
 ## Paquetes usados
 
 - xrandr

@@ -12,6 +12,8 @@ Xscreendr te permite añadir nuevas resoluciones a tu monitor con Xrandr y te da
 
 `git clone https://github.com/proyectoarchlinux/Xscreendr.git`
 
+`cd Xscreendr`
+
 Dar permisos de ejecución:
 
 > Para usuarios de Debian y derivados:
